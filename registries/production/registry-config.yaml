@@ -1,0 +1,29 @@
+name: Production Registry
+summary: Registry containing resources (artifacts) used in production environments.
+url: https://apicurio-registry-mt-apicurio-apicurio-registry.apps.smaug.na.operate-first.cloud/t/2834ef-b19a-364f-bbef-a227de1333a9/apis/registry/v2
+credentials:
+  username: service-account-gitops
+  password: ${SA_PASSWORD}
+rules:
+  validity: FULL
+  compatibility: BACKWARD
+roles:
+  - principal: bwayne
+    role: READ-ONLY
+  - principal: ckent
+    role: READ-ONLY
+  - principal: dprince
+    role: READ-ONLY
+  - principal: enigma
+    role: READ-ONLY
+  - principal: sa-app-1
+    role: READ-ONLY
+  - principal: sa-app-2
+    role: READ-ONLY
+  - principal: sa-app-3
+    role: READ-ONLY
+settings:
+  - name: registry.ccompat.legacy-id-mode.enabled
+    value: false
+  - name: registry.auth.basic-auth-client-credentials.enabled
+    value: true
